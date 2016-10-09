@@ -2,12 +2,13 @@ package com.mvc_model.service;
 
 import com.mvc_model.dao.UserDao;
 import com.mvc_model.dao.UserDaoImpl;
+import com.mvc_model.dao.UserDaoMysqlImpl;
 import com.mvc_model.domain.Users;
 import com.mvc_model.exception.UserHasExistException;
 
 
 public class BussnisServiceImpl implements BussnisService {
-	UserDao dao = new UserDaoImpl();
+	UserDao dao = new UserDaoMysqlImpl();
 	@Override
 	public void regist(Users user) throws UserHasExistException {
 		// TODO Auto-generated method stub
